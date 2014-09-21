@@ -1,4 +1,5 @@
 Description of project scripts
+
 Getting and Cleaning Data course project
 
 September 2014
