@@ -65,6 +65,8 @@ for (fieldName in FeatureNames[,2])
 #  and each subject.
 
 AvgData <- aggregate (MergedData2, by=list(ActivityID2=MergedData2$ActivityID,SubjectID2=MergedData2$SubjectID), FUN=mean, na.rm=TRUE)
+# Remove duplicate columns
+AvgData <- AvgData[,!(names(AvgData) %in% c("SubjectID2","ActivityID2"))]
 
 # 3 Use descriptive activity names to name the activities in the data set
 
